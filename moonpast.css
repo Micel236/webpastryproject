@@ -1,0 +1,280 @@
+.navbar {
+    color: #ecd7af ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgb(192, 156, 109);
+    position: fixed; /* Navbar tetap di atas saat di-scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-text {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Ini akan mencegah teks terpotong */
+    justify-content: flex-end; /* Tetap merapat ke kanan */
+}
+
+.nav-links li {
+    margin-left: 60px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ecd7af;
+    font-size: 15px;
+    font-weight: 800;
+    transition: all 0.3s ease; /* Transisi halus saat di-hover */
+    position: relative;
+}
+
+/* Efek Garis Bawah Saat Hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8f782c; /* Warna merah */
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ad8b41;
+}
+
+
+/* Import font Serif yang elegan dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+.PASTRY-hero {
+    width: 100%;
+    height: 70vh;
+    /* Ganti URL dengan gambar roti Anda */
+    background: url('background1.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Teks di tengah secara vertikal */
+    padding-left: 10%;   /* Jarak dari kiri */
+}
+
+.PASTRY-content {
+    max-width: 600px;
+}
+
+.tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: #ffffff; /* Warna hijau tua khas bakery */
+    margin-bottom: -10px; /* Merapatkan jarak dengan teks bawah */
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    color: #ffffff; /* Hijau yang lebih gelap */
+    letter-spacing: 1px;
+}
+
+.lowercase {
+    font-size: 3rem;
+    text-transform: lowercase;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Penambahan nuansa coklat pastel jika gambar belum cukup pastel */
+.PASTRY-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(245, 235, 224, 0.2); /* Cream pastel overlay */
+    z-index: 1;
+}
+
+.PASTRY-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Pengaturan dasar */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Judul Section */
+.section-title {
+    font-style: italic;
+  color: #b08968; /* Warna cokelat seperti di gambar */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Kontainer Utama (Flexbox) */
+.product-container {
+  display: flex;
+  justify-content: center; /* Meratakan ke tengah */
+  gap: 20px; /* Jarak antar kartu */
+  flex-wrap: wrap; /* Supaya responsif jika layar kecil */
+}
+
+/* Kartu Produk */
+.product-card {
+  width: 250px;
+  position: relative;
+  padding: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Judul Produk */
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* Kategori Produk */
+.product-card p {
+    font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Lencana "HOT" Merah */
+.badge-hot {
+  background-color: #ff6b6b;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-15deg); /* Sedikit miring */
+}
+
+.catalog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header dengan garis abu-abu */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.line {
+  width: 80px;
+  height: 12px;
+  background-color: #eee;
+}
+
+.section-title {
+  color: #a67c52;
+  font-family: serif;
+  font-weight: bold;
+}
+
+/* Pengaturan Grid untuk 5 kolom */
+.product-grid {
+  display: grid;
+  /* repeat(5, 1fr) berarti membuat 5 kolom yang lebarnya sama rata */
+  grid-template-columns: repeat(5, 1fr); 
+  column-gap: 20px;
+  row-gap: 50px; /* Jarak antar baris atas dan bawah */
+}
+
+.product-card {
+  position: relative;
+}
+
+.img-wrapper {
+  height: 180px; /* Menjaga agar tinggi gambar seragam */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  font-size: 14px;
+  margin: 10px 0 5px;
+  font-family: sans-serif;
+}
+
+.product-card p {
+  font-size: 10px;
+  color: #999;
+  text-transform: uppercase;
+}
+
+/* Badge merah miring */
+.badge-hot {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  transform: rotate(-15deg);
+  z-index: 2;
+}
+
+/* Jika layar kurang dari 768px (Tablet/HP) */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Ubah jadi 2 kolom saja */
+  }
+}
